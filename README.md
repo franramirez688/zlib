@@ -1,4 +1,11 @@
-ZLIB DATA COMPRESSION LIBRARY
+This is an adaptation of the [original library](http://www.zlib.net/) to enable its use with Biicode.
+
+[Github repository link](https://github.com/franramirez688/zlib)
+
+[Biicode repository link](https://www.biicode.com/zlib)
+
+
+ZLIB DATA COMPRESSION LIBRARY [![Build Status](https://travis-ci.org/franramirez688/zlib.svg?branch=master)](https://travis-ci.org/franramirez688/zlib)
 
 zlib 1.2.8 is a general purpose data compression library.  All the code is
 thread safe.  The data format used by the zlib library is described by RFCs
