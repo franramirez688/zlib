@@ -9,6 +9,8 @@ IF(WIN32)
             examples_gzappend
             examples_gzjoin
             examples_zpipe
+            test_minigzip
+            test_example
         )
 ENDIF(WIN32)
 
