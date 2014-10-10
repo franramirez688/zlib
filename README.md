@@ -4,8 +4,9 @@ This is an adaptation of the [original library](http://www.zlib.net/) to enable 
 
 [Biicode repository link](https://www.biicode.com/zlib)
 
+[![Build Status](https://travis-ci.org/franramirez688/zlib.svg?branch=master)](https://travis-ci.org/franramirez688/zlib)
 
-ZLIB DATA COMPRESSION LIBRARY [![Build Status](https://travis-ci.org/franramirez688/zlib.svg?branch=master)](https://travis-ci.org/franramirez688/zlib)
+# ZLIB DATA COMPRESSION LIBRARY 
 
 zlib 1.2.8 is a general purpose data compression library.  All the code is
 thread safe.  The data format used by the zlib library is described by RFCs
@@ -82,7 +83,7 @@ Notes for some targets:
 - For PalmOs, see http://palmzlib.sourceforge.net/
 
 
-Acknowledgments:
+## Acknowledgments:
 
   The deflate format used by zlib was defined by Phil Katz.  The deflate and
   zlib specifications were written by L.  Peter Deutsch.  Thanks to all the

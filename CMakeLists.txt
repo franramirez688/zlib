@@ -4,14 +4,16 @@ include(${CMAKE_HOME_DIRECTORY}/biicode.cmake)
 INIT_BIICODE_BLOCK()
 
 IF(WIN32)
-    SET(BII_BLOCK_EXES examples_enough
-            examples_fitblk
-            examples_gzappend
-            examples_gzjoin
-            examples_zpipe
-            test_minigzip
-            test_example
-        )
+        IF(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/examples" AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/test" )
+            SET(BII_BLOCK_EXES examples_enough
+                    examples_fitblk
+                    examples_gzappend
+                    examples_gzjoin
+                    examples_zpipe
+                    test_minigzip
+                    test_example
+                )
+        ENDIF()
 ENDIF(WIN32)
 
 ENDIF()
