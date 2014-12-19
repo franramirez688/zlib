@@ -108,17 +108,10 @@ IF(NOT BIICODE)
 ENDIF()
 
 set(ZLIB_PC ${CMAKE_CURRENT_BINARY_DIR}/zlib.pc)
-if(BIICODE)
-
-    BII_CONFIGURE_FILE(zlib.pc.cmakein zlib.pc) 
-    BII_CONFIGURE_FILE(zconf.h.cmakein zconf.h)
-ELSE()
-
 configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/zlib.pc.cmakein
         ${ZLIB_PC} @ONLY)
 configure_file( ${CMAKE_CURRENT_SOURCE_DIR}/zconf.h.cmakein
         ${CMAKE_CURRENT_BINARY_DIR}/zconf.h @ONLY)
-ENDIF()
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_SOURCE_DIR})
 
 
