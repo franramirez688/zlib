@@ -4,15 +4,16 @@ compiler:
 before_install:
 - sudo apt-get update -qq
 install:
+- sudo apt-get install libglu1-mesa-dev xorg-dev
 - wget http://www.biicode.com/downloads/latest/ubuntu64
 - mv ubuntu64 bii-ubuntu64.deb
-- (! sudo dpkg -i bii-ubuntu64.deb ) && sudo apt-get -f install
+- (sudo dpkg -i bii-ubuntu64.deb) && sudo apt-get -f install
 - rm bii-ubuntu64.deb
-- wget http://www.cmake.org/files/v3.0/cmake-3.0.1-Linux-i386.tar.gz
-- tar -xzf cmake-3.0.1-Linux-i386.tar.gz
-- sudo cp -fR cmake-3.0.1-Linux-i386/* /usr
-- rm -rf cmake-3.0.1-Linux-i386
-- rm cmake-3.0.1-Linux-i386.tar.gz
+- wget https://s3.amazonaws.com/biibinaries/thirdparty/cmake-3.0.2-Linux-64.tar.gz
+- tar -xzf cmake-3.0.2-Linux-64.tar.gz
+- sudo cp -fR cmake-3.0.2-Linux-64/* /usr
+- rm -rf cmake-3.0.2-Linux-64
+- rm cmake-3.0.2-Linux-64.tar.gz
 script:
 - cmake --version
 - bii init biicode_project
@@ -27,4 +28,4 @@ after_success:
 - bii publish
 env:
   global:
-    secure: sUdARJAfh1c/H069CvoZNXE19KZ4sEgpi7cyUULsGk9qcZZ3W3571YA9EKpCSOA70mlS4uFDtNS7UdvGWeleui/06Jmj+N+naKUog4RvUt+lJbOeG5JmThwlG1XckCU8kabiQyxfp/vkS8FMjU5PiNS3z/qMz7PB+c7wHCoBHnQ=
+    secure: DtP/kaOmvsXVnpbpUzfLWKUPZO8nLRo88UMFwSz+UndkEqBSbirZCue6k4O6eTpzeZqxkB5ZYwvkV8KQ/iuyuUVATB6/XNE8c9su13P1DktDs/QAuppu00JiY+FIaNBHcLEQoTLChruFrLEQa3d0PY4Ezoibk0oRGjvFEfZ1UH0=
